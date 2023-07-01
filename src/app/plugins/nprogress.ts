@@ -1,5 +1,6 @@
-import { definePlugin } from '@/main'
 import { useNProgress } from '@vueuse/integrations/useNProgress'
+
+import { definePlugin } from '@/app/scripts/definePlugin'
 
 const { start, done } = useNProgress()
 

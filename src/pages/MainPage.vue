@@ -1,10 +1,11 @@
 <script setup lang="ts">
-  import { computed, onMounted, ref, watch } from 'vue'
-  import { storeToRefs } from 'pinia'
+  import { ROUTES } from '@/shared/constants/routes'
 </script>
 
 <template>
-  <div class="container"></div>
+  <div class="container">
+    <RouterLink :to="ROUTES.ABOUT.path">to AboutPage</RouterLink>
+  </div>
 </template>
 
 <style scoped lang="scss">

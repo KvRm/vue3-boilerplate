@@ -1,6 +1,6 @@
 <script setup lang="ts">
-  import { computed, onMounted, ref, watch } from 'vue'
   import { storeToRefs } from 'pinia'
+  import { computed, onMounted, ref, watch } from 'vue'
 </script>
 
 <template>
