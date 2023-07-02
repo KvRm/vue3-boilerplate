@@ -1,5 +1,3 @@
-import '@purge-icons/generated'
-
 import { initApp } from '@/app/initApp'
 
 initApp().then(async (appBoot) => {

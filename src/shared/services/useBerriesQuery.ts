@@ -1,8 +1,8 @@
 import { useQuery, UseQueryOptions } from '@tanstack/vue-query'
-import { AxiosResponse } from 'axios'
+import type { AxiosResponse } from 'axios'
 
 import * as pokeapi from '@/shared/api/pokeapi'
-import { PokeapiEntitiesResponse } from '@/shared/api/pokeapi/types'
+import type { PokeapiEntitiesResponse } from '@/shared/api/pokeapi/types'
 
 const queryKey = ['pokeapi']
 

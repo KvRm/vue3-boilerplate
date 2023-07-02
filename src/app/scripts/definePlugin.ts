@@ -1,4 +1,4 @@
-import { AppPlugins } from '@/shared/typings/app'
+import type { AppPlugins } from '@/shared/typings/app'
 
 export function definePlugin(plugin: AppPlugins) {
   return plugin

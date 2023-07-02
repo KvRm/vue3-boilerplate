@@ -2,10 +2,10 @@ export interface PokeapiEntitiesResponse {
   count: number
   next: string
   previous: any
-  results: Result[]
+  results: PokeapiEntity[]
 }
 
-export interface Result {
+export interface PokeapiEntity {
   name: string
   url: string
 }

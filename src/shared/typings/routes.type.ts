@@ -1,4 +1,4 @@
-import { ROUTES } from '@/shared/constants/routes'
+import type { ROUTES } from '@/shared/constants/routes'
 
 type RouteKeys = keyof typeof ROUTES
 

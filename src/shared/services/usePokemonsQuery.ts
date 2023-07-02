@@ -1,10 +1,10 @@
 import { useQuery, UseQueryOptions } from '@tanstack/vue-query'
-import { AxiosResponse } from 'axios'
-import { Ref } from 'vue'
+import type { AxiosResponse } from 'axios'
+import type { Ref } from 'vue'
 
 import * as pokeapi from '@/shared/api/pokeapi'
-import { Pokemon } from '@/shared/api/pokeapi/pokemons/responses/pokemon'
-import { PokeapiEntitiesResponse } from '@/shared/api/pokeapi/types'
+import type { Pokemon } from '@/shared/api/pokeapi/pokemons/responses/pokemon'
+import type { PokeapiEntitiesResponse } from '@/shared/api/pokeapi/types'
 
 const queryKey = ['pokeapi']
 
@@ -17,7 +17,7 @@ export const usePokemonsQuery = () => {
       queryFn: ({ signal }) => pokeapi.pokemons.getPokemons(queryParams, { signal }),
       ...(vueQueryOptions || {}),
       select: (data) => {
-        return <AxiosResponse<PokeapiEntitiesResponse>>data
+        return data as AxiosResponse<PokeapiEntitiesResponse>
       },
     })
   }
@@ -28,7 +28,7 @@ export const usePokemonsQuery = () => {
       queryFn: ({ signal }) => pokeapi.pokemons.searchPokemons(pokemonName.value, queryParams, { signal }),
       ...(vueQueryOptions || {}),
       select: (data) => {
-        return data as AxiosResponse<Pokemon>
+        return data as AxiosResponse<Pokemon | PokeapiEntitiesResponse>
       },
     })
   }

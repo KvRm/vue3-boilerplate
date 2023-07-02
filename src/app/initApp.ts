@@ -1,3 +1,6 @@
+import '@purge-icons/generated'
+
+import { VueQueryPlugin } from '@tanstack/vue-query'
 import { createPinia } from 'pinia'
 import { createApp, markRaw } from 'vue'
 
@@ -8,6 +11,7 @@ export async function initApp() {
   const pinia = createPinia()
   const app = createApp(App)
 
+  app.use(VueQueryPlugin)
   app.use(router)
   app.use(pinia)
   pinia.use(({ store }) => {

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 import { ROUTES } from '@/shared/constants/routes'
-import { RouteNames, RoutePaths } from '@/shared/typings/routes.type'
+import type { RouteNames, RoutePaths } from '@/shared/typings/routes.type'
 
 const routes: (RouteRecordRaw & { name: RouteNames; path: RoutePaths })[] = [
   {

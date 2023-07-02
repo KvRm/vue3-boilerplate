@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  readonly VITE_APP_VAR: string
+  readonly VITE_BASE_API_URL_POKEMON: string
 }
 
 interface ImportMeta {

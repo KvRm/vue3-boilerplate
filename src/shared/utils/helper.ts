@@ -1,3 +1,3 @@
-const fn = () => {
+export const fn = () => {
   return 0
 }

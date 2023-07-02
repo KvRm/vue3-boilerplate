@@ -15,7 +15,11 @@ export default defineConfig({
     port: 3030,
   },
   plugins: [
-    vue(),
+    vue({
+      script: {
+        defineModel: true,
+      },
+    }),
 
     Components({
       dirs: ['src/shared/components'],

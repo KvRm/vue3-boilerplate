@@ -1,10 +1,12 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "src/import-meta.d.ts"],
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "src/**/*.ts", "components.d.ts", "components-global.d.ts"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
     "baseUrl": ".",
+    "importsNotUsedAsValues": "error",
+    "isolatedModules": true,
     "moduleResolution": "node",
     "paths": {
       "@/*": ["./src/*"]
